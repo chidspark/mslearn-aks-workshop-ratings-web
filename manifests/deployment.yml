@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: chidsparkmslearnaksworkshopratingsweb 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chidsparkmslearnaksworkshopratingsweb
+  template:
+    metadata:
+      labels:
+        app: chidsparkmslearnaksworkshopratingsweb 
+    spec:
+      containers:
+        - name: chidsparkmslearnaksworkshopratingsweb 
+          image: elasticagent.azurecr.io/chidsparkmslearnaksworkshopratingsweb
+          ports:
+          - containerPort: 8080
